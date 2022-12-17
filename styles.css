@@ -1,0 +1,75 @@
+:root{
+    --dark-background: #151515;
+    --light-font-color: white;
+    --light-green: #4DE19F;
+}
+body{
+    margin: 0;
+    background-color: var(--dark-background);
+    color: var(--light-font-color);
+    font-family: 'Mitr', sans-serif;
+    font-size: 24px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2vw 15vh;
+}
+h1{
+    font-size: 4rem;
+    font-family: 'Overpass', sans-serif;
+}
+.header-name{
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+.navigation-menu{
+    display: flex;
+}
+.navigation-menu div{
+    padding: 0.7rem;
+}
+.navigation-menu div:hover{
+    cursor: pointer;
+    -moz-box-shadow: inset 0 -10px 10px -14px #fff;
+    -webkit-box-shadow: inset 0 -10px 10px -14px #fff;
+    box-shadow: rgb(255 255 255) 0px -10px 10px -14px inset;
+    border-radius: 4px;
+}
+.about-me{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw; 
+}
+.about-me img{
+    position: fixed;
+    top: 0;
+    right:15vw;
+    width: 30vw;
+    z-index: -1;
+}
+.welcome-text span{
+    text-decoration: underline var(--light-green) 0.4rem;
+    text-underline-offset: 1.1rem;
+}
+.short-introduction{
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 35vw;
+}
+.contact-btn{
+    background-color: transparent;
+    border: solid 4px transparent;
+    border-bottom: solid var(--light-green) 4px;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--light-font-color);
+    font-family: 'Overpass', sans-serif;
+    width: fit-content;
+}
+.contact-btn:hover{
+    border: solid var(--light-green) 4px;
+    cursor: pointer;
+}
