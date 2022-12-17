@@ -45,7 +45,9 @@ h1{
 .about-me{
     display: flex;
     flex-direction: column;
-    margin-left: 10vw; 
+    margin: 0 10vw; 
+    border-bottom: 1px solid white;
+    padding-bottom: 30vh;
 }
 .about-me img{
     position: fixed;
@@ -86,6 +88,11 @@ h1{
     position: fixed;
     top: 50vh;
     right: 12vw;
+}
+.separator{
+    width: 70vw;
+    border: 1px solid white;
+    margin-left: 15vw;
 }
 
 @media only screen and (max-width: 1400px) {
