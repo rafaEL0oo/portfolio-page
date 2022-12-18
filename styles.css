@@ -16,7 +16,7 @@ header{
     margin: 2vw 15vh;
 }
 h1{
-    font-size: 4rem;
+    font-size: 5rem;
     font-family: 'Overpass', sans-serif;
 }
 .header-name{
@@ -49,12 +49,21 @@ h1{
     padding-bottom: 30vh;
     justify-content: space-between;
 }
-.about-me img{
+.introduction-photo img{
     position: absolute;
     top: 0;
     right:15vw;
     width: 30vw;
     z-index: -1;
+}
+.introduction-text img{
+    position: absolute;
+    top: 50vh;
+    left: 4vw;
+    width: 10vw;
+    z-index: -1;
+    filter: invert(94%) sepia(4%) saturate(171%) hue-rotate(226deg) brightness(117%) contrast(100%);
+    opacity: 0.4;
 }
 .welcome-text span{
     text-decoration: underline var(--light-green) 0.4rem;
@@ -99,6 +108,7 @@ h1{
     gap: 30px;
     justify-content: space-evenly;
     margin: 10vh 10vw;
+    align-items: center;
 }
 .technologies img{
     width: 150px;
@@ -111,7 +121,38 @@ h1{
     text-align: center;
     padding: 20px 0 5px 0;
 }
+.projects{
+    margin: 0 10vw; 
+}
+.project-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-header h2{
+    font-size: 5rem;
+}
+.projects-thumbnail{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 50px
+}
+.projects-thumbnail img{
+    max-width: 100%;
+}
+.projects-thumbnail h3{
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-family: 'Overpass', sans-serif;
+}
+.projects-thumbnail span{
+    font-size: 1rem;
+    opacity: 0.8;
+}
 
+
+/*MEDIA QUERY*/
 @media only screen and (max-width: 1400px) {
     .about-me{
         margin:0;
@@ -131,6 +172,9 @@ h1{
         text-align: justify;
     }
     .decoration-circle{
+        display: none;
+    }
+    .solar-icon{
         display: none;
     }
 }
@@ -154,5 +198,8 @@ h1{
     }
     .short-introduction{
         max-width: 60%;
+    }
+    .technologies{
+        flex-wrap: wrap;
     }
 }
