@@ -44,13 +44,13 @@ h1{
 }
 .about-me{
     display: flex;
-    flex-direction: column;
     margin: 0 10vw; 
     border-bottom: 1px solid white;
     padding-bottom: 30vh;
+    justify-content: space-between;
 }
 .about-me img{
-    position: fixed;
+    position: absolute;
     top: 0;
     right:15vw;
     width: 30vw;
@@ -85,7 +85,7 @@ h1{
     height: 150px;
     border-radius: 50%;
     opacity: 0.7;
-    position: fixed;
+    position: absolute;
     top: 50vh;
     right: 12vw;
 }
@@ -94,12 +94,31 @@ h1{
     border: 1px solid white;
     margin-left: 15vw;
 }
+.technologies{
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+    margin: 10vh 10vw;
+}
+.technologies img{
+    width: 150px;
+    filter: invert(99%) sepia(99%) saturate(2%) hue-rotate(37deg) brightness(113%) contrast(100%);
+}
+.technologies div{
+    border: 1px solid white;
+    border-radius: 15px;
+    flex: 1;
+    text-align: center;
+    padding: 20px 0 5px 0;
+}
 
 @media only screen and (max-width: 1400px) {
     .about-me{
         margin:0;
         align-items: center;
         width: 100vw;
+        flex-direction: column-reverse;
+        padding-bottom: 10vh;
     }
     .about-me img{
         position: static;
@@ -118,11 +137,22 @@ h1{
 
 
 @media only screen and (max-width: 950px) {
+    h1{
+        font-size: 3rem;
+    }
     header{
         justify-content: center;
         margin: 1vw 5vh;
     }
     .header-name{
         display: none;
+    }
+    .introduction-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .short-introduction{
+        max-width: 60%;
     }
 }
